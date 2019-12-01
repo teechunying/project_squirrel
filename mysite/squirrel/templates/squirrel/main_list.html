@@ -1,0 +1,9 @@
+<h1> HOME PAGE </h1>
+
+<a href = "add/">ADD SQUIRREL SIGHTING! </a>
+</br>
+</br>
+<h2> List of Squirrels </h2>
+{% for s in all_squirrels %}
+<li> <a href = "{% url 'squirrel:update_delete' s.unique_squirrel_id %}">{{s.unique_squirrel_id}}</a></li>
+{% endfor %}

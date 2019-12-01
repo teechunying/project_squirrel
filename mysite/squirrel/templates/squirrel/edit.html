@@ -1,0 +1,25 @@
+<h2>Squirrel ID: {{instance.unique_squirrel_id}}</h2>
+
+
+<p class="main_list-box">
+<a href="{% url 'squirrel:main_list' %}" class="main_list-link">Back to Squirrel List</a>
+</p>
+
+{% if error %}<p><strong>{{ error }}</strong></p>{% endif %}
+
+<form method="POST" class="form">
+    {% csrf_token %}
+    {% for field in form %}
+    	<div class=fieldWrapper">
+    		{{field.label_tag}} {{field}}
+	</div>
+    {% endfor %}
+    <button type="submit" class="save btn btn-default">Update!</button>
+{% if success %}<p><strong>{{ success }}</strong></p>{% endif %}
+
+</form>
+
+
+<p class="deletelink-box">
+<a href="{% url 'squirrel:delete' instance.unique_squirrel_id %}" class="deletelink">Delete</a>
+</p>

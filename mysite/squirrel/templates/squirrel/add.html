@@ -1,0 +1,84 @@
+<html>
+<head>
+<title>Create a New Sighting!</title>
+</head>
+
+<h2>Create a New Sighting!</h2>
+
+<p class="main_list-box">
+<a href="{% url 'squirrel:main_list' %}" class="main_list-link">Back to Squirrel List</a>
+</p>
+
+<body>
+<form action="" method="POST">
+{% csrf_token %}
+Longitude: 
+    <input type="text" name="longitude"/></br>
+Latitude: 
+    <input type="text" name="latitude"/></br>
+Unique Squirrel ID: 
+    <input type="text" name="unique_squirrel_id"/></br>
+Shift:
+    <input type="radio" name="shift" value="AM" checked>AM
+    <input type="radio" name="shift" value="PM">PM</br>
+Date:
+    <input type="date" name="date"></br>
+Age: 
+    <input type="radio" name="age" value="Adult" checked> Adult
+    <input type="radio" name="age" value="Juvenile"> Juvenile</br>
+Primary Fur Color: 
+    <input type="radio" name="primary_fur_color" value="Gray" checked> Gray
+    <input type="radio" name="primary_fur_color" value="Cinnamon"> Cinnamon
+    <input type="radio" name="primary_fur_color" value="Black"> Black</br>
+Location:
+    <input type="radio" name="location" value="Ground Plane" checked> Ground Plane
+    <input type="radio" name="location" value="Above Ground"> Above Ground</br>    
+Specific Location:
+    <input type="text" name="specific_location"/></br>
+Running:
+    <input type="radio" name="running" value="true" checked> True
+    <input type="radio" name="running" value="false"> False</br>    
+Chasing:
+    <input type="radio" name="chasing" value="true" checked> True
+    <input type="radio" name="chasing" value="false"> False</br>   
+Climbing:
+    <input type="radio" name="climbing" value="true" checked> True
+    <input type="radio" name="climbing" value="false"> False</br> 
+Eating:
+    <input type="radio" name="eating" value="true" checked> True
+    <input type="radio" name="eating" value="false"> False</br>   
+Foraging:
+    <input type="radio" name="foraging" value="true" checked> True
+    <input type="radio" name="foraging" value="false"> False</br>   
+Other Activites:
+    <input type="text" name="other_activites"/></br>
+Kuks:
+    <input type="radio" name="kuks" value="true" checked> True
+    <input type="radio" name="kuks" value="false"> False</br>   
+Quaas:
+    <input type="radio" name="quaas" value="true" checked> True
+    <input type="radio" name="quaas" value="false"> False</br>  
+Moans:
+    <input type="radio" name="moans" value="true" checked> True
+    <input type="radio" name="moans" value="false"> False</br>  
+Tail Flags:
+    <input type="radio" name="tail_flags" value="true" checked> True
+    <input type="radio" name="tail_flags" value="false"> False</br> 
+Tail Twitches:
+    <input type="radio" name="tail_twitches" value="true" checked> True
+    <input type="radio" name="tail_twitches" value="false"> False</br>
+Approaches:
+    <input type="radio" name="approaches" value="true" checked> True
+    <input type="radio" name="approaches" value="false"> False</br> 
+Indifferent:
+    <input type="radio" name="indifferent" value="true" checked> True
+    <input type="radio" name="indifferent" value="false"> False</br> 
+Runs From:
+    <input type="radio" name="runs_from" value="true" checked> True
+    <input type="radio" name="runs_from" value="false"> False</br> 
+<input type="submit" value="Post"/>
+</form>
+</body>
+
+</html>
+

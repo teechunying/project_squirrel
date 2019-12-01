@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+
+
+<h2> Squirrel Statistics! </h2>
+</br>
+<li> Number of adult squirrels per juvenile squirrel: {{adult_juvenile}} </li>
+</br>
+<table style="width:40%">
+        <tr>
+                <th>Fur Color</th>
+                <th>Frequency</th>
+        </tr>
+        {% for color, freq in color_dict.items %}
+                <tr>
+                        <td>{{ color }}</td>
+                        <td>{{ freq }}</td>
+                </tr>
+        {% endfor %}
+</table>
+</br>
+<table style="width:40%">
+        <tr>
+                <th>Shift</th>
+                <th>Frequency</th>
+        </tr>
+        {% for shift, freq in shift_dict.items %}
+                <tr>
+                        <td>{{ shift }}</td>
+                        <td>{{ freq }}</td>
+                </tr>
+        {% endfor %}
+</table>
+</br>
+<table style="width:40%">
+        <tr>
+                <th>Response</th>
+                <th>Frequency</th>
+        </tr>
+        {% for response, freq in response_dict.items %}
+                <tr>
+                        <td>{{ response }}</td>
+                        <td>{{ freq }}</td>
+                </tr>
+        {% endfor %}
+</table>
+</br>
+<table style="width:40%">
+        <tr>
+                <th>Tail Type</th>
+                <th>Frequency</th>
+        </tr>
+        {% for tail, freq in tail_dict.items %}
+                <tr>
+                        <td>{{ tail }}</td>
+                        <td>{{ freq }}</td>
+                </tr>
+        {% endfor %}
+</table>
+</body>
+</html>
+
