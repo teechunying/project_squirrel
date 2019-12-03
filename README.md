@@ -1,5 +1,6 @@
--># Squirrel Tracker<-
- <div align="center">
+<div aligh="center"># Squirrel Tracker
+</div>
+<div align="center">
         <img src ="https://images-na.ssl-images-amazon.com/images/I/51VVn%2B3%2BcfL.jpg"><br>
 </div>
 # Team Members
