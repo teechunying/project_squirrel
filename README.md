@@ -5,7 +5,7 @@ The data is based on the <a href="https://data.cityofnewyork.us/Environment/2018
 # Team Members
 <li>Ian Ho & Chun Ying Tee 
 <li>UNIs: [ih2350, ct2957]
-<li>Group Name: Group TEAM SINGAPORE Section 2
+<li>Team 77 Section 2
 
 # Main Features
 - Import Function: to import data from the 2018 census file
