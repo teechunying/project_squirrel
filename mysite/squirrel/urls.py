@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+
 app_name = 'squirrel'
 urlpatterns = [
         path('',views.main_list,name='main_list'),

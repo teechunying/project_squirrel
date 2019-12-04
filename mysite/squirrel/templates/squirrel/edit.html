@@ -1,6 +1,5 @@
 <h2>Squirrel ID: {{instance.unique_squirrel_id}}</h2>
 
-
 <p class="main_list-box">
 <a href="{% url 'squirrel:main_list' %}" class="main_list-link">Back to Squirrel List</a>
 </p>
@@ -18,7 +17,6 @@
 {% if success %}<p><strong>{{ success }}</strong></p>{% endif %}
 
 </form>
-
 
 <p class="deletelink-box">
 <a href="{% url 'squirrel:delete' instance.unique_squirrel_id %}" class="deletelink">Delete</a>

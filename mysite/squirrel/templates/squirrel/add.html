@@ -13,11 +13,11 @@
 <form action="" method="POST">
 {% csrf_token %}
 Longitude: 
-    <input type="text" name="longitude"/></br>
+    <input type="text" name="longitude"></br>
 Latitude: 
-    <input type="text" name="latitude"/></br>
+    <input type="text" name="latitude"></br>
 Unique Squirrel ID: 
-    <input type="text" name="unique_squirrel_id"/></br>
+    <input type="text" name="unique_squirrel_id"></br>
 Shift:
     <input type="radio" name="shift" value="AM" checked>AM
     <input type="radio" name="shift" value="PM">PM</br>
@@ -34,7 +34,7 @@ Location:
     <input type="radio" name="location" value="Ground Plane" checked> Ground Plane
     <input type="radio" name="location" value="Above Ground"> Above Ground</br>    
 Specific Location:
-    <input type="text" name="specific_location"/></br>
+    <input type="text" name="specific_location"></br>
 Running:
     <input type="radio" name="running" value="true" checked> True
     <input type="radio" name="running" value="false"> False</br>    
@@ -76,8 +76,11 @@ Indifferent:
 Runs From:
     <input type="radio" name="runs_from" value="true" checked> True
     <input type="radio" name="runs_from" value="false"> False</br> 
-<input type="submit" value="Post"/>
+
+<input type="submit" value="Post">
+
 </form>
+
 </body>
 
 </html>

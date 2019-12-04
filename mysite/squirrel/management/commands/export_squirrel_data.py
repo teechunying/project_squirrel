@@ -5,6 +5,7 @@ import csv
 class Command(BaseCommand):
     def add_arguments(self,parser):
         parser.add_argument('csvfile', nargs='+',type=str)
+
     def handle(self, *args, **options):
         path = options['csvfile'][0]
         from squirrel.models import Squirrel

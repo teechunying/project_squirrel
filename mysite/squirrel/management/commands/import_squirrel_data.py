@@ -39,6 +39,7 @@ class Command(BaseCommand):
                         indifferent=row['Indifferent'],
                         runs_from=row['Runs from'])
                 s.save()
+
             print('Imported ',len(Squirrel.objects.all()), 'squirrel sightings!')
 
 
