@@ -18,7 +18,10 @@ def add(request):
             s = Squirrel()
             s.longitude = request.POST.get('longitude')
             s.latitude = request.POST.get('latitude')
-            s.unique_squirrel_id = request.POST.get('unique_squirrel_id')
+            temp_id = request.POST.get('unique_squirrel_id')
+            while temp_id in Squirrel.objects.values_list('unique_squirrel_id',flat=True):
+                temp_id  += '-R'
+            s.unique_squirrel_id = temp_id
             s.shift = request.POST.get('shift')
             s.date = datetime.datetime.strptime(request.POST.get('date'),'%Y-%m-%d')
             date_error = None
@@ -51,7 +54,7 @@ def add(request):
     return render(request,'squirrel/add.html',context)
 
 
-def update_delete(request,unique_squirrel_id):
+def update(request,unique_squirrel_id):
     instance = get_object_or_404(Squirrel, unique_squirrel_id=unique_squirrel_id)
     if request.method == 'POST':
         form = SquirrelForm(request.POST or None, instance=instance,auto_id=False)
