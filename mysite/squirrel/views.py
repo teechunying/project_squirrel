@@ -13,7 +13,7 @@ def main_list(request):
     return render(request, 'squirrel/main_list.html',{'all_squirrels':all_squirrels})
     
 def add(request):
-    context={}
+    context = dict()
     if request.method == 'POST':
             s = Squirrel()
             s.longitude = request.POST.get('longitude')
