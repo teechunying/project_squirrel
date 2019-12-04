@@ -49,4 +49,5 @@ python manage.py delete
 
 # Additional Notes
 - The map might take a while to load for larger datasets
-- When a new sighting is added, if the Unique Squirrel ID is already in use, the web application automatically adds a suffix <i>-R</i> to the end of the squirrel ID 
+- When a new sighting is added, if the Unique Squirrel ID is already in use, the web application automatically adds a suffix <i>-R</i> to the end of the squirrel ID
+- When a new sighting is added, if the input date is after today, the form automatically corrects the date to the current date, and the following message will show up at the bottom of the form: <i>'Date automatically corrected to today!'</i> 
