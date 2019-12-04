@@ -12,7 +12,7 @@ The data is based on the <a href="https://data.cityofnewyork.us/Environment/2018
 - Export Function: to export data in CSV format
 - Mapping: displays location of squirrel sightings on an OpenStreets map 
 - List of all squirrel sightings, with quick access to the following functions:
-	- Note: most recently added squirrel sightings are at the top of the list
+	- <i>Note: most recently added squirrel sightings are at the top of the list</i>
 	- Accessible Functions include:
 		- Update Function: Allows for updating of details for each squirrel sighting
 		- Adding new sightings
