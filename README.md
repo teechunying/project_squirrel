@@ -36,11 +36,13 @@ In this example, export.csv is the file name we want to export the data into.
 python manage.py import_squirrel_data export.csv
 ```
 # Dependencies
+- Django   (2.2.7)
+- pytz     (2019.3)
+- sqlparse (0.3.0)
 
-# Installation from sources
-
-
-
-just trying git
-trying even more git
-
+# Additional Features
+- Function to Delete ALL existing squirrel sightings in the database
+```sh
+# on Bash command line
+python manage.py delete
+```
