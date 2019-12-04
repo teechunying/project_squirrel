@@ -13,13 +13,18 @@ def main_list(request):
     return render(request, 'squirrel/main_list.html',{'all_squirrels':all_squirrels})
     
 def add(request):
+    context={}
     if request.method == 'POST':
             s=Squirrel()
             s.longitude = request.POST.get('longitude')
             s.latitude = request.POST.get('latitude')
             s.unique_squirrel_id = request.POST.get('unique_squirrel_id')
             s.shift = request.POST.get('shift')
-            s.date = datetime.datetime.strptime(request.POST.get('date'),'%Y-%m-%d') # need to double check
+            s.date = datetime.datetime.strptime(request.POST.get('date'),'%Y-%m-%d')
+            date_error = None
+            if s.date > datetime.datetime.now():
+                date_error = 'Date automatically corrected to today!'
+                s.date = datetime.datetime.now().date()
             s.age = request.POST.get('age')
             s.primary_fur_color = request.POST.get('primary_fur_color')
             s.location = request.POST.get('location')
@@ -39,8 +44,11 @@ def add(request):
             s.indifferent = request.POST.get('indifferent')
             s.runs_from = request.POST.get('runs_from')
             s.save()
-
-    return render(request,'squirrel/add.html')
+            success = 'Successfully added!'
+            
+            context={'date_error':date_error,
+                     'success':success,}
+    return render(request,'squirrel/add.html',context)
 
 
 def update_delete(request,unique_squirrel_id):

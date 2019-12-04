@@ -24,7 +24,7 @@ Shift:
     <input type="radio" name="shift" value="AM" checked>AM
     <input type="radio" name="shift" value="PM">PM</br>
 Date:
-    <input type="date" name="date"></br>
+	<input type="date" name="date"></br>
 Age: 
     <input type="radio" name="age" value="Adult" checked> Adult
     <input type="radio" name="age" value="Juvenile"> Juvenile</br>
@@ -80,7 +80,8 @@ Runs From:
     <input type="radio" name="runs_from" value="false"> False</br> 
 
 <input type="submit" value="Post">
-
+{% if success %}<p><strong>{{ success }}</strong></p>{% endif %}
+{% if date_error %}<p><strong>{{date_error}}</strong></p>{% endif %}
 </form>
 
 </body>
