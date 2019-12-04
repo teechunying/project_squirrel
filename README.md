@@ -49,3 +49,4 @@ python manage.py delete
 
 # Additional Notes
 - The map might take a while to load for larger datasets
+- When a new sighting is added, if the Unique Squirrel ID is already in use, the web application automatically adds a suffix <i>-R</i> to the end of the squirrel ID 
