@@ -19,7 +19,7 @@ A Django-based web application for tracking all known squirrels in Central Park.
 # Importing Data
 To import data from a CSV file, execute the following line of code:
 
-In this example, rows.csv is the file name.
+In this example, <b>rows.csv</b> is the file name.
 
 ```sh
 # on Bash command line
@@ -29,7 +29,7 @@ python manage.py import_squirrel_data rows.csv
 # Exporting Data
 To import data into a CSV file, execute the following line of code:
 
-In this example, export.csv is the file name we want to export the data into.
+In this example, <b>export.csv</b> is the file name we want to export the data into.
 
 ```sh
 # on Bash command line
