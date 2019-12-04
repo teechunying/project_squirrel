@@ -11,12 +11,12 @@ The data is based on the <a href="https://data.cityofnewyork.us/Environment/2018
 - Import Function: to import data from the 2018 census file
 - Export Function: to export data in CSV format
 - Mapping: displays location of squirrel sightings on an OpenStreets map 
-- List of all squirrel sightings, with quick access to the following functions:
+- List of all squirrel sightings, with quick access to the following functions: * 
 	- Update Function: Allows for updating of details for each squirrel sighting
 	- Adding new sightings
 	- Delete sightings
-- General statistics about squirrel sightings
-
+- General statistics about squirrel sightings <br> 
+* Sorted in chronological order of date of sighting added 
 # Importing Data
 To import data from a CSV file, execute the following line of code:
 
