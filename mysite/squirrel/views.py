@@ -13,9 +13,9 @@ def main_list(request):
     return render(request, 'squirrel/main_list.html',{'all_squirrels':all_squirrels})
     
 def add(request):
-    context={}
+    context = dict()
     if request.method == 'POST':
-            s=Squirrel()
+            s = Squirrel()
             s.longitude = request.POST.get('longitude')
             s.latitude = request.POST.get('latitude')
             s.unique_squirrel_id = request.POST.get('unique_squirrel_id')
@@ -46,8 +46,8 @@ def add(request):
             s.save()
             success = 'Successfully added!'
             
-            context={'date_error':date_error,
-                     'success':success,}
+            context = {'date_error':date_error,
+                       'success':success,}
     return render(request,'squirrel/add.html',context)
 
 
@@ -59,7 +59,7 @@ def update_delete(request,unique_squirrel_id):
             instance = form.save(commit=False)
             instance.save()
             success = "Successfully Updated!"
-            context= {'form': form,
+            context = {'form': form,
                       'instance': instance,
                       'success': success,}
 
@@ -73,7 +73,7 @@ def update_delete(request,unique_squirrel_id):
 
     else:
         form = SquirrelForm(instance=instance,auto_id=False)
-        context= {'form': form,
+        context = {'form': form,
                   'instance': instance}
 
         return render(request, 'squirrel/edit.html', context)
