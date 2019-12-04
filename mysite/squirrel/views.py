@@ -112,9 +112,9 @@ def stats(request):
 
 
 def map_plot(request):
-    lats = Squirrel.objects.values_list('latitude',flat=True)[:20]
-    longs = Squirrel.objects.values_list('longitude',flat=True)[:20]
-    ids = Squirrel.objects.values_list('unique_squirrel_id',flat=True)[:20]
+    lats = Squirrel.objects.values_list('latitude',flat=True)
+    longs = Squirrel.objects.values_list('longitude',flat=True)
+    ids = Squirrel.objects.values_list('unique_squirrel_id',flat=True)
 
     geo_json = [ {"type": "Feature",
                         "properties": {

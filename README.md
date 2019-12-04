@@ -46,3 +46,6 @@ python manage.py import_squirrel_data export.csv
 # on Bash command line
 python manage.py delete
 ```
+
+# Additional Notes
+- The map might take a while to load for larger datasets

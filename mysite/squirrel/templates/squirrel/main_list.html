@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html>
+<style>
+li::before {
+	content: "\1F43F";
+	margin-left:-20px;
+	margin-right:10px;
+}
+</style>
+
 <h1> HOME PAGE </h1>
 
 <a href = "add/">ADD SQUIRREL SIGHTING! </a>
@@ -7,3 +17,4 @@
 {% for s in all_squirrels %}
 <li> <a href = "{% url 'squirrel:update_delete' s.unique_squirrel_id %}">{{s.unique_squirrel_id}}</a></li>
 {% endfor %}
+</html>
