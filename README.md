@@ -2,8 +2,6 @@
 A Django-based web application for tracking all known squirrels in Central Park.<br>
 The data is based on the <a href="https://data.cityofnewyork.us/Environment/2018-Central-Park-Squirrel-Census-Squirrel-Data/vfnx-vebw">2018 Central Park Squirrel Census data</a>. 
 
-this is a random change
-
 # Team Members
 <li>Ian Ho & Chun Ying Tee 
 <li>UNIs: [ih2350, ct2957
